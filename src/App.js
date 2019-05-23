@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './index.scss'
+import Header from './Header/Header';
+export class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      hi
-    </div>
-  );
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+      </div >
+    )
+  }
 }
 
-export default App;
+
+
+
+
+
