@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
 	return (
-		<header>
-			Header
+		<header className='App-header'>
+			<a href='#'>Scouter</a>
 		</header>
 	);
 };
