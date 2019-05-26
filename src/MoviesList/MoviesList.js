@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom';
 export default class MoviesList extends Component {
 	constructor(props) {
 		super(props)
@@ -20,13 +20,16 @@ export default class MoviesList extends Component {
 			]
 		}
 	}
-
 	render() {
 		return (
 			<ul>
 				{this.state.movies.map((movie) => (
 					<li key={movie.id}>
-						{movie.title}
+						<a
+						// to={`/movie${``}`}
+						>
+							{movie.title}
+						</a>
 					</li>
 				))}
 			</ul>
