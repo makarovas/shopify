@@ -28,7 +28,7 @@ export class App extends Component {
       <Fragment >
         <Header />
         {movies.map(movie => (
-          <MoviesList key={movie.id} movie={movie} />
+          <MoviesList key={movie.id} movie={movie} desc={movie.desc} />
         ))}
 
       </Fragment >

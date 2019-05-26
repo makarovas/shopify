@@ -5,9 +5,15 @@ import PropTypes from 'prop-types';
 
 export default class MoviesList extends Component {
 	static propTypes = {
-		movie: PropTypes.string
+		movie: PropTypes.shape({
+			title: PropTypes.string.isRequired,
+		}),
+		desc: PropTypes.string
 	}
 
+	static defaultProps = {
+		desc: 'Description not available'
+	}
 
 	constructor(props) {
 		super(props)
@@ -39,8 +45,3 @@ export default class MoviesList extends Component {
 		)
 	}
 }
-
-// MoviesList.propTypes = {
-// 	movie: PropTypes.string
-// }
-
