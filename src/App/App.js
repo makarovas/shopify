@@ -24,10 +24,11 @@ export class App extends Component {
     return (
       <Fragment >
         <Header />
-        {this.state.movies.map(movie => (
-          <MoviesListItem key={movie.id} movie={movie} />
-        ))}
-
+        <ul>
+          {this.state.movies.map(movie => (
+            <MoviesListItem key={movie.id} movie={movie} />
+          ))}
+        </ul>
       </Fragment >
     )
   }

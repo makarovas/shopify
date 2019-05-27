@@ -12,13 +12,13 @@ export default class MoviesListItem extends Component {
 
 	render() {
 		return (
-			<ul>
-				<li>
-					<h3>{this.props.movie.title}</h3>
-					<p>{this.props.movie.release_date}</p>
-					<p>{this.props.movie.vote_average}</p>
-				</li>
-			</ul>
+
+			<li>
+				<h3>{this.props.movie.title}</h3>
+				<p>{this.props.movie.release_date}</p>
+				<p>{this.props.movie.vote_average}</p>
+			</li>
+
 		)
 	}
 }
