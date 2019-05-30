@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
-export default class MoviesListItem extends Component {
+export default class Movie extends Component {
 	static propTypes = {
 		movie: PropTypes.shape({
-			title: PropTypes.string.isRequired,
+			title: PropTypes.string.isRequired
 		})
 	}
 
+
 	render() {
 		return (
-
 			<li>
 				<h3>{this.props.movie.title}</h3>
 				<p>{this.props.movie.release_date}</p>
