@@ -2,9 +2,15 @@ import React, { Component, Fragment } from 'react';
 import "../index.scss";
 import Header from "../Header/Header";
 import Movie from "../MoviesListItem/Movie";
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import MoviePage from './../MoviePage/MoviePage'
 export class App extends Component {
-  state = { // eslint-disable-line
+  // eslint-disable-next-line
+  state = {
     movies: [],
   }
 
@@ -23,14 +29,21 @@ export class App extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Header />
-        <ul>
-          {this.state.movies.map(movie => (
-            <Movie key={movie.id} movie={movie} />
-          ))}
-        </ul>
-      </Fragment>
+      <Router>
+        <Fragment>
+          <Header />
+          <Switch>
+            <Route exact path='/' Component={Movie}>
+              <ul>
+                {this.state.movies.map(movie => (
+                  <Movie key={movie.id} movie={movie} />
+                ))}
+              </ul>
+            </Route>
+            <Route exact path='/${this.state.movie.id}' Component={MoviePage} />
+          </Switch>
+        </Fragment>
+      </Router>
     );
   }
 }
