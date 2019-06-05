@@ -11,15 +11,14 @@ export default class Movie extends Component {
 			title: PropTypes.string.isRequired,
 		}).isRequired,
 	}
-
-
 	render() {
 		return (
 			<li>
-				<h3>{this.props.movie.title}</h3>
-				<img src={`${POSTER_PATH}${this.props.movie.poster_path}`} alt={this.props.movie.title} />
-			</li>
-
+				< h3 > {this.props.movie.title}</h3>
+				<Link to='/page'>
+					<img src={`${POSTER_PATH}${this.props.movie.poster_path}`} alt={this.props.movie.title} />
+				</Link>
+			</li >
 		)
 	}
 }

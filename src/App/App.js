@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import "../index.scss";
 import Header from "../Header/Header";
 import Movie from "../MoviesListItem/Movie";
+import { Page } from '../Page/Page'
 import {
   BrowserRouter as Router,
   Route,
@@ -40,6 +41,7 @@ export class App extends Component {
                 ))}
               </ul>
             </Route>
+            <Route exact path='/page' Component={Page} />
             <Route exact path='/${this.state.movie.id}' Component={MoviePage} />
           </Switch>
         </Fragment>
