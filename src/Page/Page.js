@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import "../index.scss";
 import Movie from "../MoviesListItem/Movie";
-
-
 export class Page extends Component {
 	// eslint-disable-next-line
 	state = {
